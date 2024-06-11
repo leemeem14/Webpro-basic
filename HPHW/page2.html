@@ -1,0 +1,46 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>타이틀 정하기 귀찮아요.</title>
+	<style>
+      body{
+		background-color: aqua;
+		
+	  }
+	</style>
+	<script type="text/javascript">
+		let span = null;
+		function init(){
+			span = document.getElementById("s1");
+			timerId = setInterval("doRotate()", 300);
+		}
+		function doRotate(){
+			let str = span.innerHTML;
+			let firstChar = str.substr(0, 1);
+			let remains = str.substr(1, str.length-1);
+			str = remains + firstChar;
+			span.innerHTML = str;
+		}
+		function stopTimer(){
+			clearInterval(timerId);
+		}
+		function move(){
+            let mov = document.getElementById("mov");
+    let url = mov.options[mov.selectedIndex].value;
+    window.open(url, '_blank');
+        }
+	</script>
+</head>
+<body onload="init()">
+	<h2>여기 왔으나 보여줄건 없고 이거 보고 웹페이지 고르러 가십쇼.</h2>
+	<hr>
+	<h2>이거 돌아가는글자 클릭하면 멈추니까 만약 멈췄다면 새로고침 하시거나 다른 페이지로 돌아가십쇼.</h2>
+	<div>
+		<span id="s1" style="background-color: gray;" onclick="stopTimer()">겉표지보다 큰 몇 향수류</span>
+	</div>
+	<select  id="mov">
+        <option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page1.html">첫 페이지?</option>
+		<option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page3.html">3번째 페이지?</option>
+    </select>
+	<button onclick="move()">선택한 페이지로 이동!</button>
+</body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취미..?</title>
+</head>
+<script>function move(){
+    let mov = document.getElementById("mov");
+let url = mov.options[mov.selectedIndex].value;
+window.open(url, '_blank');
+}</script>
+<style>
+h1{
+    font-size: 40pt;
+}
+body{
+    background-color: bisque;
+}
+
+</style>
+<body>
+    <h1>핸드폰에서 가져온 제 취미와 관련된 사진들입니다.</h1>
+    <img src="img/KakaoTalk_20240611_132807030_01.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_02.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_03.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_04.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_05.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_06.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_07.jpg"  width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_08.jpg" width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_09.jpg" width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_10.jpg" width="33%", height="8%">
+    <img src="img/KakaoTalk_20240611_132807030_11.jpg" width="33%", height="8%">
+    <select  id="mov">
+		<option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page1.html">첫페이지로?</option>
+        <option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page1.html">2번째 페이지로?</option>
+    </select>
+    <button onclick="move()">선택한 페이지로 이동</button>
+</body>
+</html>

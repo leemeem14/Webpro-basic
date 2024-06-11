@@ -1,0 +1,68 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blah Blah Blah</title>
+	<script type="text/javascript">
+        
+		function hideMenu() {
+			alert("오른쪽 마우스 눌러도 할거 없으니까 이거나 보세요.");
+			return false;
+		}
+		document.oncontextmenu = hideMenu;			
+		function load(){
+			let sel = document.getElementById("sel");
+    let url = sel.options[sel.selectedIndex].value;
+    window.open(url, '_blank');
+		}
+        function move(){
+            let mov = document.getElementById("mov");
+    let url = mov.options[mov.selectedIndex].value;
+    window.open(url, '_blank');
+        }
+	</script>
+	<style>
+		body{
+			background-image:url(img/dDdliS9lDLHUEunjEdVY1ZWoS1sfi2F3b0uaxReoaC5FrddP3O8GFGUe8vkleQEjBDP4vtA_vDbs0Sxt8z8XbQ.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;	
+		}
+		h1{
+			margin-left: 40px;
+			margin-top: 40px;
+		}
+		h2{
+			margin-left: 44px;
+			margin-top: 40px;
+		}
+		select{
+			margin-left: 45px;
+		}
+		button{
+			margin-left: 45px;
+		}
+	</style>
+</head>
+<body onload="notice()">
+    <h1>여기는 제가 주로 찾는 사이트들을 리스트화 해서 편히 갈수 있게한거랑 제 취미 사진 조금 올려놓은 사이트입니다.</h1>
+    <h2>그냥 즐겨찾기 쓰면 안되냐고요? 그러네요.그래도 성적이 걸려있는데 과제는 해야하니까요.</h2>
+	<select id="sel">
+		<option value="http://www.naver.com">네이버</option>
+		<option value="http://www.google.com">구글</option>
+		<option value="https://www.youtube.com">유튜브</option>
+        <option value="https://namu.wiki/w/나무위키:대문">꺼무위키</option>
+        <option value="https://arca.live">아카라이브</option>
+        <option value="https://itch.io">itch.io(인디 겜 찾는곳)</option>
+        <option value="https://www.office.com/launch/word?wdOrigin=MARKETING.WORD.SIGNIN&auth=2">워드 웹버전</option>
+        <option value="https://www.office.com/launch/PowerPoint/?wdOrigin=MARKETING.WORD.SIGNIN&from=MARKETING.WORD.SIGNIN">파포 웹버전</option>
+	</select>
+    <select  id="mov">
+        <option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page2.html">2번째 페이지</option>
+		<option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page2.html">3번째 페이지</option>
+    </select>
+	<br>
+	<button onclick="load()">선택한 웹사이트로 이동</button>
+    <button onclick="move()">이동!</button>
+
+
+
+</body></html>
