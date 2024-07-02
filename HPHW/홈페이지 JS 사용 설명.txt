@@ -1,0 +1,59 @@
+<page1>			
+		function move1(){
+			let sel = document.getElementById("website");
+    let url = sel.options[sel.selectedIndex].value;
+    window.open(url, '_blank');
+		}
+주로 이용하는 사이트를 로드할때 사용합니다.
+
+
+        function move2(){
+            let mov = document.getElementById("page");
+    let url = mov.options[mov.selectedIndex].value;
+    window.open(url, '_blank');
+        }
+다른 페이지를 로드할때 사용합니다.
+
+function hideMenu() {
+			alert("오른쪽 마우스 눌러도 할거 없으니까 이거나 보세요.");
+			return false;
+		}
+		document.oncontextmenu = hideMenu;
+마우스 우클릭을 했을때 alert을 띄웁니다.
+
+<page2>
+let span = null;
+
+		function init(){
+			span = document.getElementById("s1");
+			timerId = setInterval("doRotate()", 300);
+		}
+		function doRotate(){
+			let str = span.innerHTML;
+			let firstChar = str.substr(0, 1);
+			let remains = str.substr(1, str.length-1);
+			str = remains + firstChar;
+			span.innerHTML = str;
+		}
+		function stopTimer(){
+			clearInterval(timerId);
+		}
+타이머 인터벌에 따라 글자열들이 한칸씩 옮겨집니다.
+
+stopTimer는 타이머를 멈추게 합니다.
+
+function move(){
+            let mov = document.getElementById("page");
+    let url = mov.options[mov.selectedIndex].value;
+    window.open(url, '_blank');
+        }
+다른 페이지로 이동할때 쓰입니다.
+
+<page3>
+
+function move(){
+    let mov = document.getElementById("mov");
+let url = mov.options[mov.selectedIndex].value;
+window.open(url, '_blank');
+}
+다른 페이지로 이동할때 쓰입니다.

@@ -25,7 +25,7 @@
 			clearInterval(timerId);
 		}
 		function move(){
-            let mov = document.getElementById("mov");
+            let mov = document.getElementById("page");
     let url = mov.options[mov.selectedIndex].value;
     window.open(url, '_blank');
         }
@@ -38,7 +38,7 @@
 	<div>
 		<span id="s1" style="background-color: gray;" onclick="stopTimer()">겉표지보다 큰 몇 향수류</span>
 	</div>
-	<select  id="mov">
+	<select  id="page">
         <option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page1.html">첫 페이지?</option>
 		<option value="file:///D:/WebWeb%20nim%20hanpanhaeyo/HPHW/page3.html">3번째 페이지?</option>
     </select>
